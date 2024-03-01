@@ -1,5 +1,9 @@
 # LaTex2Paper: A community for paper reading and latex paper writing with great utilities
 
+<div align="center">
+  <img src="./assets/logo.png" width="90%" alt="Logo">
+</div>
+
 This is a project mainly for improving overleaf LaTex paper writing experience, by word, phrase, euqation, table, figure, and global utilities and templates, formulating a more powerful paper reading and LaTex writing community.
 
 ## Features
