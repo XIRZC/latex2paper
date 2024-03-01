@@ -1,0 +1,28 @@
+{
+  "name": "@overleaf/ranges-tracker",
+  "description": "Shared logic for syncing comments and tracked changes with operational transforms",
+  "main": "index.cjs",
+  "types": "types/index.d.cts",
+  "files": [
+    "index.cjs",
+    "types"
+  ],
+  "author": "Overleaf (https://www.overleaf.com)",
+  "private": true,
+  "scripts": {
+    "lint": "eslint --ext .js --ext .cjs --max-warnings 0 --format unix .",
+    "lint:fix": "eslint --fix --ext .js --ext .cjs .",
+    "format": "prettier --list-different $PWD/'**/*.{js,cjs}'",
+    "format:fix": "prettier --write $PWD/'**/*.{js,cjs}'",
+    "test": "npm run lint && npm run format && npm run types:check && npm run test:unit",
+    "test:ci": "npm run test:unit",
+    "test:unit": "mocha --exit test/**/*.{js,cjs}",
+    "types:build": "[ -d types ] || tsc --noEmit false --emitDeclarationOnly",
+    "types:check": "tsc --noEmit",
+    "types:rebuild": "rm -rf types && npm run types:build"
+  },
+  "devDependencies": {
+    "mocha": "^10.2.0",
+    "typescript": "^5.0.4"
+  }
+}

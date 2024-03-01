@@ -1,0 +1,60 @@
+{
+  "name": "overleaf",
+  "private": true,
+  "dependencies": {
+    "patch-package": "^8.0.0"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.6",
+    "eslint": "^8.15.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-chai-expect": "^3.0.0",
+    "eslint-plugin-chai-friendly": "^0.7.2",
+    "eslint-plugin-cypress": "^2.15.1",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-mocha": "^10.1.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "prettier": "2.5.1",
+    "resolve-url-loader": "^5.0.0",
+    "sass": "^1.69.5",
+    "sass-loader": "^13.3.2",
+    "typescript": "^5.0.4"
+  },
+  "scripts": {
+    "format": "prettier --list-different $PWD/'**/*.js'",
+    "format:fix": "prettier --write $PWD/'**/*.js'",
+    "lint": "eslint --max-warnings 0 --format unix .",
+    "lint:fix": "eslint --fix .",
+    "postinstall": "patch-package"
+  },
+  "workspaces": [
+    "jobs/mirror-documentation",
+    "libraries/*",
+    "services/analytics",
+    "services/chat",
+    "services/clsi",
+    "services/clsi-perf",
+    "services/contacts",
+    "services/docstore",
+    "services/document-updater",
+    "services/filestore",
+    "services/freegeoip",
+    "services/github-sync",
+    "services/history-v1",
+    "services/idp",
+    "services/latexqc",
+    "services/notifications",
+    "services/project-history",
+    "services/real-time",
+    "services/references",
+    "services/spelling",
+    "services/templates",
+    "services/third-party-datastore",
+    "services/third-party-references",
+    "services/tpdsworker",
+    "services/web"
+  ]
+}

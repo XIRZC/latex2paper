@@ -1,0 +1,38 @@
+const SessionManager = require('../Authentication/SessionManager')
+const TutorialHandler = require('./TutorialHandler')
+const { expressify } = require('@overleaf/promise-utils')
+
+const VALID_KEYS = [
+  'react-history-buttons-tutorial',
+  'table-generator-promotion',
+  'writefull-integration',
+]
+
+async function completeTutorial(req, res, next) {
+  const userId = SessionManager.getLoggedInUserId(req.session)
+  const tutorialKey = req.params.tutorialKey
+
+  if (!VALID_KEYS.includes(tutorialKey)) {
+    return res.sendStatus(404)
+  }
+
+  await TutorialHandler.setTutorialState(userId, tutorialKey, 'completed')
+  res.sendStatus(204)
+}
+
+async function postponeTutorial(req, res, next) {
+  const userId = SessionManager.getLoggedInUserId(req.session)
+  const tutorialKey = req.params.tutorialKey
+
+  if (!VALID_KEYS.includes(tutorialKey)) {
+    return res.sendStatus(404)
+  }
+
+  await TutorialHandler.setTutorialState(userId, tutorialKey, 'postponed')
+  res.sendStatus(204)
+}
+
+module.exports = {
+  completeTutorial: expressify(completeTutorial),
+  postponeTutorial: expressify(postponeTutorial),
+}
