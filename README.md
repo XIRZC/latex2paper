@@ -1,20 +1,20 @@
-# LaTex2Paper: A community for paper reading and latex paper writing with great utilities
+# LaTeX2Paper: A community for paper reading and latex paper writing with great utilities
 
 <div align="center">
   <img src="./assets/logo.png" width="90%" alt="Logo">
 </div>
 
-This is a project mainly for improving overleaf LaTex paper writing experience, by word, phrase, euqation, table, figure, and global utilities and templates, formulating a more powerful paper reading and LaTex writing community.
+This is a project mainly for improving overleaf LaTeX paper writing experience, by word, phrase, euqation, table, figure, and global utilities and templates, formulating a more powerful paper reading and LaTeX writing community.
 
 ## Features
 
 - Online overleaf collaborating and paper writing by latex
-- Paper reading and writing community, especially for LaTex
+- Paper reading and writing community, especially for LaTeX
 - Paper word & phrase & sentence & logic bank
-- LaTex euqations visual editing and templates
-- LaTex table visual editing and templates
-- LaTex figure visual layout templates
-- Global LaTex templates
+- LaTeX euqations visual editing and templates
+- LaTeX table visual editing and templates
+- LaTeX figure visual layout templates
+- Global LaTeX templates
 
 ## Technology Stack
 
@@ -28,7 +28,7 @@ This is a project mainly for improving overleaf LaTex paper writing experience, 
 ├── README.md
 ├── backend # SpringCloud backend api
 ├── frontend # Next.js frontend community view
-└── overleaf # original open-source overleaf website for LaTex writing
+└── overleaf # original open-source overleaf website for LaTeX writing
 
 4 directories, 1 file
 ```
